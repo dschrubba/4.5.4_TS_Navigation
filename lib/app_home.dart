@@ -29,12 +29,12 @@ class _AppHomeState extends State<AppHome> {
       appBar: CustomAppBar(
         title: widget.title,
       ),
+      body: screens[currentIndex ?? 0],
       bottomNavigationBar: NavigationBar(
         destinations: [
           NavigationDestination(icon: Icon(Icons.calendar_month), label: "News"),
           NavigationDestination(icon: Icon(Icons.heart_broken), label: "Likes"),
           NavigationDestination(icon: Icon(Icons.person), label: "Profil"),
-          
           ],
         selectedIndex: currentIndex ?? 0,
         onDestinationSelected: (int index) => setState(() {
