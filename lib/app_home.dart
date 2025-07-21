@@ -30,7 +30,16 @@ class _AppHomeState extends State<AppHome> {
         title: widget.title,
       ),
       bottomNavigationBar: NavigationBar(
-        destinations: [...screens],
+        destinations: [
+          NavigationDestination(icon: Icon(Icons.calendar_month), label: "News"),
+          NavigationDestination(icon: Icon(Icons.heart_broken), label: "Likes"),
+          NavigationDestination(icon: Icon(Icons.person), label: "Profil"),
+          
+          ],
+        selectedIndex: currentIndex ?? 0,
+        onDestinationSelected: (int index) => setState(() {
+          currentIndex = index;
+        }),
       ),
     );
   }
