@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tasksheet_454_navigation/static_colors.dart';
 import 'package:tasksheet_454_navigation/widgets/app_bar.dart';
-import 'package:tasksheet_454_navigation/pages/page_profile.dart';
-import 'package:tasksheet_454_navigation/pages/page_likes.dart';
-import 'package:tasksheet_454_navigation/pages/page_news.dart';
+import 'package:tasksheet_454_navigation/app_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,11 +26,9 @@ class MyApp extends StatelessWidget {
           )
         )
       ),
-      home: Scaffold(
-        appBar: const CustomAppBar(title: MyApp.title),
-        body: const PageNews(),
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      )
+      home: AppHome(
+          title: title,
+        ),
     );
   }
 }
